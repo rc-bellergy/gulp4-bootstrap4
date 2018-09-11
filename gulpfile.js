@@ -119,7 +119,7 @@ gulp.task('compile-html', function (done) {
         .pipe(replace('../../assets/', '/assets/')) // update the image paths to fit the build folder setup
         .pipe(gulp.dest('./build/'))
         .on('finish', function() {
-            browser.reload;
+            browser.reload();
             done();
         });
 });
@@ -131,11 +131,11 @@ gulp.task('compile-html:reset', function (done) {
 
 // Watch files for changing
 gulp.task('watch', function (done) {
-    gulp.watch('./src/scss/**/*', gulp.series('compile-sass', browser.reload));
+    gulp.watch('./src/scss/**/*', gulp.series('compile-sass', function() { browser.reload(); }));
     gulp.watch('./src/html/pages/**/*', gulp.series('compile-html'));
     gulp.watch(['./src/html/{layouts,includes,helpers,data}/**/*'], gulp.series('compile-html:reset', 'compile-html'));
-    gulp.watch('./src/js/**/*', gulp.series('compile-js', browser.reload));
-    gulp.watch('./src/assets/**/*', gulp.series(browser.reload));
+    gulp.watch('./src/js/**/*', gulp.series('compile-js', function() { browser.reload(); }));
+    gulp.watch('./src/assets/**/*', gulp.series( function() { browser.reload(); }));
     done();
 });
 
