@@ -2,9 +2,9 @@
 
 Useing gulp 4 auto build bootstrap 4 starter template.
 Included:
-- bootsrtap 4.1.3
-- fortawesome 5.3.1
-- jquery 3.3.1
+- bootsrtap 4.4.1
+- fortawesome 5.12.1
+- jquery 3.4.1
 
 Created by michael@designquest.com.hk
 
