@@ -29,7 +29,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-string-replace": "^1.1.2",
     "gulp-uglify": "^3.0.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mq4-hover-shim": "^0.3.0",
     "panini": "^1.6.3",
     "popper.js": "^1.16.1",
